@@ -8,34 +8,85 @@
 
 body {
   height: 100vh;
-  font-family: 'Lato', sans-serif;
-}
-
-/* --Container */
-
-.container {
-  height: 100%;
   width: 100%;
   display: flex;
+  font-family: 'Lato', sans-serif;
+  overflow: hidden;
 }
+
 
 /* --First section */
 
 .container-first-section {
   height: 100%;
   width: 35%;
-  display: grid;
-  place-items: center;
   position: relative;
   color: #fff;
 }
-
+.container-text {
+  z-index: 2;
+}
 .container-text h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
 }
 .container-text p {
   font-size: 1.4rem;
+}
+
+/* slide */
+
+.slide {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 500ms ease;
+  overflow: hidden;
+}
+
+.slide-img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: all 500ms ease;
+}
+
+.decoration-div {
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  top: 10%;
+  z-index: 0;
+  left: -25%;
+  transform: rotate(-45deg);
+  background-color: hsl(189,13%,22%);
+}
+
+.slide-2 .decoration-div{
+  background-color: bisque;
+}
+
+.slide-3 .decoration-div{
+  background-color:hsl(213,61%,93%);
+}
+
+.slide-4 .decoration-div{
+  background-color:hsl(193,9%,69%);
+}
+
+.svg-icon {
+  color: #fff;
+  width: 35px;
+  height: 35px;
 }
 
 /* slide n1 */
@@ -86,9 +137,7 @@ body {
   height: 100%;
   width: 65%;
   position: relative;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  
 }
 
 /* --Button */
